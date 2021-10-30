@@ -4,3 +4,7 @@
 - A függvény szorozza meg a tömbelemek értékét 1.27-tel, majd pedig 
 __térjen vissza__ az elemek egész számra kerekített összegével!
 */
+
+const brutto = (aPrices = []) => {
+    return Math.round(aPrices.map(price => price * 1.27).reduce((sum, curr) => sum + curr)) ;
+};
