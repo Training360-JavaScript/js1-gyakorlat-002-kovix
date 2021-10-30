@@ -15,3 +15,12 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+
+const checker = (aArr = [], prim) => {
+    return {
+        exists:                 aArr.includes(prim),
+        index:                  aArr.findIndex(item => item === prim),
+        allElementsAreNumbers:  aArr.every(item => !isNaN(item)),
+        someElementsAreNumbers: aArr.some(item => !isNaN(item))
+    };
+};
